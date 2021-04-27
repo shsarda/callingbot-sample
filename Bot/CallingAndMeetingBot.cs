@@ -97,8 +97,6 @@ namespace CallingMeetingBot.Bot
                     var httpResponse = httpRequest.CreateResponse(HttpStatusCode.Forbidden);
                     await httpResponse.CreateHttpResponseAsync(response).ConfigureAwait(false);
                 }
-
-
             }
             catch (Exception e)
             {
@@ -139,6 +137,13 @@ namespace CallingMeetingBot.Bot
             }
         }
 
+        /// <summary>
+        /// Answers the incoming call received by the Bot.
+        /// </summary>
+        /// <param name="callId"></param>
+        /// <param name="tenantId"></param>
+        /// <param name="scenarioId"></param>
+        /// <returns></returns>
         private async Task BotAnswerIncomingCallAsync(string callId, string tenantId, Guid scenarioId)
         {
             var answerRequest = this.RequestBuilder.Communications.Calls[callId].Answer(
@@ -158,6 +163,12 @@ namespace CallingMeetingBot.Bot
             await this.GraphApiClient.SendAsync(answerRequest, RequestType.Create, tenantId, scenarioId).ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// Get list of all participants present in the call.
+        /// </summary>
+        /// <param name="participantObjects"></param>
+        /// <param name="argsTenantId"></param>
+        /// <returns></returns>
         private async Task<List<ParticipantDetails>> GetListOfParticipantsInCall(List<object> participantObjects, string argsTenantId)
         {
             var participantDetailsList = new HashSet<ParticipantDetails>();
