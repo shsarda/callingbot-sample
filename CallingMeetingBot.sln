@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallingMeetingBot", "CallingMeetingBot.csproj", "{DFC0FC5D-5C6B-4F33-AAC9-601856EACBFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFC0FC5D-5C6B-4F33-AAC9-601856EACBFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFC0FC5D-5C6B-4F33-AAC9-601856EACBFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFC0FC5D-5C6B-4F33-AAC9-601856EACBFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFC0FC5D-5C6B-4F33-AAC9-601856EACBFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE2AD249-2C69-4102-9F7D-EA27C129B5B5}
+	EndGlobalSection
+EndGlobal
