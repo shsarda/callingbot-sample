@@ -56,9 +56,13 @@ Go to API permissions -> Add a permission -> Microsoft Graph
 		- Directory.AccessAsUser.All
 - Add Redirect URI
 	- Select Add a platform -> web
-	- Enter the redirect URI for your app `ex. https://subdomain.ngrok.io/auth`
+	- Enter the redirect URI for your app `ex. https://%subdomain%.ngrok.io/`
 	- Next, Enable implicit grant by checking ID Token and Access Token
 ![](./Images/Setup_Step3_1.png)
+- Consent the permissions
+    * Go to "https://login.microsoftonline.com/common/adminconsent?client_id=<app_id>&state=<any_number>&redirect_uri=<app_redirect_url>"
+    * Sign in with a tenant admin
+    * Consent for the whole tenant.
 
 ### Step #4: Run the app locally
 - Clone the repo <br/>
@@ -71,7 +75,7 @@ Go to API permissions -> Add a permission -> Microsoft Graph
 
 - Edit appsettings.json file
 	- Update AppId and AppSecret as values of Application Id and Client Secret from Step #1.
-	- Update BotBaseURL `ex. https://subdomain.ngrok.io`
+	- Update BotBaseURL `ex. https://%subdomain%.ngrok.io`
 
 - Run ngrok using the port on which the project is running locally.
 
