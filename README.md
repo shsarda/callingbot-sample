@@ -15,19 +15,19 @@ Samples are generally not production-ready or an out-of-the-box solution but are
 ### Step #1: Create AAD App
 - Go to Azure Active Directory -> App registrations -> New registration.
 - Register an app.
-	- Provide app Name and choose Multitenant. Leave the redirect URI for now.
+	- Provide app Name and choose Multitenant. Leave the redirect URI for now.<br/>
 	![](./Images/Setup_Step1_1.png)
-	- Create Client Secret
-	![](./Images/Setup_Step1_2.png)
+	- Create Client Secret<br/>
+	![](./Images/Setup_Step1_2.png)<br/>
 	- Note the Application (Client) Id and Client Serect for further steps.
 
 ### Step #2: Register in Bot Service
-- Create a Bot Channel Registration in Azure in different tab.
-![](./Images/Setup_Step2_1.png)
-- Create new Microsoft App Id and password.
-![](./Images/Setup_Step2_2.png)
+- Create a Bot Channel Registration in Azure in different tab.<br/>
+![](./Images/Setup_Step2_1.png)<br/>
+- Create new Microsoft App Id and password.<br/>
+![](./Images/Setup_Step2_2.png)<br/>
 Fill Microsoft App Id and Password as values of Application Id and Client Secret from Step #1.
-- Set calling configuration in Teams channel. Add webhook for calling. `ex. https://%subdomain%.ngrok.io`
+- Set calling configuration in Teams channel. Add webhook for calling. `ex. https://%subdomain%.ngrok.io`<br/>
 ![](./Images/Setup_Step2_3.png)
 
 ### Step #3: Configure AAD App 
@@ -54,15 +54,15 @@ Go to API permissions -> Add a permission -> Microsoft Graph
 		- Directory.Read.All
 		- Directory.ReadWrite.All
 		- Directory.AccessAsUser.All
-- Add Redirect URI
+- - Add Redirect URI
 	- Select Add a platform -> web
 	- Enter the redirect URI for your app `ex. https://%subdomain%.ngrok.io/`
 	- Next, Enable implicit grant by checking ID Token and Access Token
-![](./Images/Setup_Step3_2.png)
-- Consent the permissions
-    * Go to "https://login.microsoftonline.com/common/adminconsent?client_id=<app_id>&state=<any_number>&redirect_uri=<app_redirect_url>"
-    * Sign in with a tenant admin
-    * Consent for the whole tenant.
+![](./Images/Setup_Step3_2.png)<br/>
+- - Consent the permissions
+    - Go to "https://login.microsoftonline.com/common/adminconsent?client_id=<app_id>&state=<any_number>&redirect_uri=<app_redirect_url>"
+    - Sign in with a tenant admin
+    - Consent for the whole tenant.
 
 ### Step #4: Run the app locally
 - Clone the repo <br/>
