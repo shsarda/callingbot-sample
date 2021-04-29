@@ -27,7 +27,7 @@ Samples are generally not production-ready or an out-of-the-box solution but are
 - Create new Microsoft App Id and password.
 ![](./Images/Setup_Step2_2.png)
 Fill Microsoft App Id and Password as values of Application Id and Client Secret from Step #1.
-- Set calling configuration in Teams channel
+- Set calling configuration in Teams channel. Add webhook for calling. `ex. https://%subdomain%.ngrok.io`
 ![](./Images/Setup_Step2_3.png)
 
 ### Step #3: Configure AAD App 
@@ -58,7 +58,7 @@ Go to API permissions -> Add a permission -> Microsoft Graph
 	- Select Add a platform -> web
 	- Enter the redirect URI for your app `ex. https://%subdomain%.ngrok.io/`
 	- Next, Enable implicit grant by checking ID Token and Access Token
-![](./Images/Setup_Step3_1.png)
+![](./Images/Setup_Step3_2.png)
 - Consent the permissions
     * Go to "https://login.microsoftonline.com/common/adminconsent?client_id=<app_id>&state=<any_number>&redirect_uri=<app_redirect_url>"
     * Sign in with a tenant admin
