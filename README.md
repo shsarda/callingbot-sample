@@ -81,6 +81,10 @@ Go to API permissions -> Add a permission -> Microsoft Graph
 
 ### Step #5: Packaging and installing your app to Teams
 
+Generate manifest by enabling "supportsCalling"
+- Add two additional settings supportsCalling and supportsVideo (already enabled in manifest for this sample)
+![](./Images/Setup_Step5_1.png)<br/>
+
 Make sure the required values (such as App id) are populated in the manifest, Zip the manifest with the profile images and install it in Teams.
 
 ### Step #6: Try out the app
