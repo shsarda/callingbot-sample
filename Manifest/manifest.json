@@ -1,0 +1,43 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "id": "{{MicrosoftAppId}}",
+  "version": "1.0.0",
+  "packageName": "com.contoso.callingbot.samples",
+  "developer": {
+    "name": "Microsoft",
+    "websiteUrl": "https://www.microsoft.com",
+    "privacyUrl": "https://www.microsoft.com/privacy",
+    "termsOfUseUrl": "https://www.microsoft.com/termsofuse"
+  },
+  "name": {
+    "short": "CallingMeetingBot",
+    "full": "CallingMeetingBot - Track Participants"
+  },
+  "description": {
+    "short": "CallingMeetingBot",
+    "full": "This sample app provides a very simple app for Microsoft Teams. You can extend this to add more content and capabilities."
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#F9F9FA",
+  "configurableTabs": [],
+  "staticTabs": [],
+  "bots": [
+    {
+      "botId": "{{MicrosoftAppId}}",
+      "needsChannelSelector": true,
+      "isNotificationOnly": false,
+      "supportsCalling": true,
+      "supportsVideo": true,
+      "scopes": [ "team", "groupchat", "personal" ]
+    }
+  ],
+  "connectors": [],
+  "composeExtensions": [],
+  "permissions": [ "identity", "messageTeamMembers" ],
+  "validDomains": [ "*.ngrok.io" ],
+  "showLoadingIndicator": false
+}
