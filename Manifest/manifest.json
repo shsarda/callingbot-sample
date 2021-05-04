@@ -37,7 +37,6 @@
   ],
   "connectors": [],
   "composeExtensions": [],
-  "permissions": [ "identity", "messageTeamMembers" ],
   "validDomains": [ "*.ngrok.io" ],
   "showLoadingIndicator": false
 }
