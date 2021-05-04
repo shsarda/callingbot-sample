@@ -35,9 +35,6 @@ namespace CallingMeetingBot
             // Create the Bot Framework Adapter with error handling enabled.
             services.AddSingleton<IBotFrameworkHttpAdapter, AdapterWithErrorHandler>();
 
-            // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
-            services.AddTransient<IBot, EmptyBot>();
-
             services.AddSingleton<IGraphLogger>(this.logger);
 
             services
