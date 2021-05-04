@@ -35,17 +35,18 @@ Configure the AAD app created in Step #1.
 - Add necessary API permissions to the app.<br/>
 Go to API permissions -> Add a permission -> Microsoft Graph
 ![](./Images/Setup_Step3_1.png)
-	- Add following Application permissions
+	- Add following Application permissions for Call
 		- Calls.AccessMedia.All
 		- Calls.Initiate.All
 		- Calls.InitiateGroupCalls.All
 		- Calls.JoinGroupCalls.All
 		- Calls.JoinGroupCallsasGuest.All
+	- Add following Application permissions for User
 		- User.Read.All
 		- User.ReadWrite.All
 		- Directory.Read.All
 		- Directory.ReadWrite.All
-	- Add following Delegated permissions
+	- Add following Delegated permissions for User
 		- User.Read
 		- User.ReadWrite
 		- User.ReadBasic.All
