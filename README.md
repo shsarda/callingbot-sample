@@ -36,25 +36,14 @@ Configure the AAD app created in Step #1.
 Go to API permissions -> Add a permission -> Microsoft Graph
 ![](./Images/Setup_Step3_1.png)
 	- Add following Application permissions for Call
-		- Calls.AccessMedia.All
-		- Calls.Initiate.All
-		- Calls.InitiateGroupCalls.All
 		- Calls.JoinGroupCalls.All
 		- Calls.JoinGroupCallsasGuest.All
 	- Add following Application permissions for User
 		- User.Read.All
-		- User.ReadWrite.All
 		- Directory.Read.All
-		- Directory.ReadWrite.All
 	- Add following Delegated permissions for User
-		- User.Read
-		- User.ReadWrite
-		- User.ReadBasic.All
-		- User.Read.All
-		- User.ReadWrite.All
-		- Directory.Read.All
-		- Directory.ReadWrite.All
-		- Directory.AccessAsUser.All
+		- User.Read<br/>
+For more details on adding above graph permissions, checkout [Call Permissions](https://docs.microsoft.com/en-us/graph/api/call-answer?view=graph-rest-beta&tabs=http#permissions) and [User Permissions](https://docs.microsoft.com/en-us/graph/api/user-get?view=graph-rest-1.0&tabs=http#permissions)
 - Add Redirect URI
 	- Select Add a platform -> web
 	- Enter the redirect URI for your app `ex. https://%subdomain%.ngrok.io/`

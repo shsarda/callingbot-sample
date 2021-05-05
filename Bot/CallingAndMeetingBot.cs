@@ -178,7 +178,7 @@ namespace CallingMeetingBot.Bot
                 var participantDetailsObject = new ParticipantDetails();
 
                 // Identity User object for bot is null
-                if (participant?.Info?.Identity?.User != null) 
+                if (participant?.Info?.Identity?.User != null)
                 {
                     string aadUserId = participant.Info.Identity.User.Id;
                     string tenantId = (string)participant.Info.Identity.User.AdditionalData["tenantId"];
@@ -189,7 +189,8 @@ namespace CallingMeetingBot.Bot
                     participantDetailsObject.TenantId = tenantId;
                     try
                     {
-                        if (tenantId != null && tenantId == argsTenantId)
+                        if (GraphClient_DelegatedAuth != null && 
+                            tenantId != null && tenantId == argsTenantId)
                         {
                             var response = await GraphClient_DelegatedAuth.Users[aadUserId].Request().GetAsync();
                             string participantMail = response.Mail;
